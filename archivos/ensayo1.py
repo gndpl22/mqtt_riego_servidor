@@ -34,7 +34,7 @@ cliente.on_connect = on_connect
 cliente.on_message = on_message
 
 cliente.loop_start()
-print(cliente.connect(config.configuiaraciones_mqtt["direccion"]))
+print(cliente.connect(config.configuraciones_mqtt["direccion"]))
 while not cliente.connected_flag:  # wait in loop
     print("esperando coneccion")
     time.sleep(1)
