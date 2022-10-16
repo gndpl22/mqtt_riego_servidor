@@ -40,7 +40,7 @@ while not cliente.connected_flag:  # wait in loop
     time.sleep(1)
 print("Subscribing to topic", "house/bulbs/bulb1")
 cliente.subscribe("house/bulbs/bulb1")
-print("Publishing message to topic", "house/bulbs/bulb1")
+print("Publishing message to topic", "house/bulbs/bulb1","mensaje: OFF")
 cliente.publish("house/bulbs/bulb1", "OFF")
 time.sleep(4)  # wait
 cliente.loop_stop()
@@ -54,4 +54,6 @@ while not q.empty():
     print("received from queue, message topic=", message.topic)
     print("received from queue, message qos=", message.qos)
     print("received from queue, message retain flag=", message.retain)
+    print("      ")
+    
 
